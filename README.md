@@ -55,6 +55,11 @@ CCTV 확인, 전등 제어, 온도 확인 버튼 생성
 
 버튼을 누르면 Intent를 사용하여 각각의 액티비티로 이동
 
+:x: 문제사항1<br>
+각각의 액티비티로 이동 후 back 했을때 버튼이 비활성화되어 다시 원하는 액티비티로 이동 불가
+
+:white_check_mark:
+
 -------------------------------------------------------------------------------------------------------------------------
 ### Task 03 CCTV 영상 송출 기능 구현하기
 
@@ -70,6 +75,7 @@ a. Public ip camera url에서 영상 수신하기
 링크: 원격 카메라 링크 모음
 https://github.com/fury999io/public-ip-cams?tab=readme-ov-file
 
+:x: 문제사항2<br>
 a-1. VideoView 클래스 => 실패
 
 ````````````````````````````````
@@ -83,7 +89,7 @@ videoView1 = findViewById(R.id.videoView1);
         videoView1.start();
 ````````````````````````````````
 
-a-2. SurfaceView 상속받아 커스텀 뷰 생성하여 동영상 이미지 그려주기
+:white_check_mark: a-2. SurfaceView 상속받아 커스텀 뷰 생성하여 동영상 이미지 그려주기
 
 링크: 안드로이드로 원격 카메라 영상 가져오는 코드(2013년도 코드로 일부 수정필요)
 https://answers.opencv.org/question/15812/ip-camera-frames-manipulation/
@@ -93,7 +99,8 @@ https://yottu.tistory.com/20
 
 b. USB 카메라(웹캠) 영상 수신하기
 
-※ 동일한 네트워크 상에 있는 영상만 수신 가능하다. 외부에서 내부 네트워크로의 접근을 허용하고 싶다면 포트포워딩이 필요하다.
+동일한 네트워크 상에 있는 영상만 수신 가능하다.<br> 
+:heavy_plus_sign: 외부에서 내부 네트워크로의 접근을 허용하고 싶다면 포트포워딩이 필요하다.
 
 - HTTP를 통해 접근할 수 있는 IP 카메라로 전환하기
   링크: cam2web 프로그램으로 IP 카메라로 전환
