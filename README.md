@@ -100,13 +100,34 @@ https://yottu.tistory.com/20
 
 b. USB 카메라(웹캠) 영상 수신하기
 
-동일한 네트워크 상에 있는 영상만 수신 가능하다.<br> 
-:heavy_plus_sign: 외부에서 내부 네트워크로의 접근을 허용하고 싶다면 포트포워딩이 필요하다.
+동일한 네트워크 상에 있는 영상만 수신 가능하다. :heavy_plus_sign: 외부에서 내부 네트워크로의 접근을 허용하고 싶다면 포트포워딩이 필요하다.
 
 - HTTP를 통해 접근할 수 있는 IP 카메라로 전환하기
   링크: cam2web 프로그램으로 IP 카메라로 전환
   https://github.com/cvsandbox/cam2web?tab=readme-ov-file
-  cam2web 프로그램 실행 => 웹페이지 켜서 ip 주소 입력하여 웹캠 연결 확인 => 영상출력해주는 프로그램 코드에 url 주소 입력("http://192.168.0.100:8000/camera/mjpeg)
+  
+  cam2web 프로그램 실행<br>
+  => 웹페이지 켜서 ip 주소 입력하여 웹캠 연결 확인<br>
+  => 영상출력해주는 프로그램 코드에 url 주소 입력("http://192.168.0.100:8000/camera/mjpeg)<br>
+  => [res]-[xml]-[파일생성(ex.security)]-특정 도메인 주소 입력<br>
+  ###### 기본적으로 Android 9(Pie)부터는 모든 HTTP 요청이 차단됩니다. networkSecurityConfig 파일을 사용하면 특정 도메인에 대해 HTTP를 허용할 수 있습니다.
+
+      <?xml version="1.0" encoding="utf-8"?>
+      <network-security-config>
+          <domain-config cleartextTrafficPermitted="true">
+              <domain includeSubdomains="true">192.168.0.100</domain>
+              <domain includeSubdomains="true">192.168.137.1</domain>
+              <domain includeSubdomains="true">192.168.137.53</domain>
+          </domain-config>
+      </network-security-config>
+
+    => 매니페스트에 인터넷 권한 추가
+    
+       <uses-permission android:name="android.permission.INTERNET" />
+        <application
+          android:usesCleartextTraffic="true"
+          android:networkSecurityConfig="@xml/security">
+
 
 - a-2와 동일한 코드로 동영상 그려주기
 
