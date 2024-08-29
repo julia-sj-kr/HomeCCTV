@@ -169,9 +169,20 @@ https://medium.com/voice-tech-podcast/android-speech-to-text-tutorial-8f6fa71606
 약속된 명령어를 음성으로 통신을 통해서 보내기
 
 -------------------------------------------------------------------------------------------------------------------------
-### Task 06 CCTV 화면 움직임 기능 구현하기 using 음성인식+GPT 파인튜닝
+### Task 06 CCTV 화면 움직임 기능 구현하기 using 음성인식+ 챗 GPT 파인튜닝
 
 링크: https://github.com/openai/openai-quickstart-python<br>
 관련폴더: ChatGPT_Fine-Tuning
 
-챗GPT LLM을 파이썬으로 보내서 다양한 음성 명령을 통신을 통해서 보내기
+LLM을 이용하여 다양한 음성 명령을 통신을 통해서 보내기
+
+a. 챗지피티 API는 자바 언어 지원 안함(3번의 통신이 필요)<br>
+1. 안드로이드에서 보이스 데이터를 파이썬으로 보내줌(파이썬UDP서버)<br>
+파이썬에서 UDP 뚫는 방법 링크: https://w-world.tistory.com/217<br>
+2. 파이썬에서 OpenAI 파인튜닝으로 보이스 데이터를 명령어로 변환해서 자바로 보내줌(자바UDP서버)<br>
+3. 자바 서버에서 USB 포트로 아두이노에 명령어 전송(시리얼 통신)
+
+b. Gemini API는 자바 언어 지원(2번의 통신이 필요)<br>
+1. 안드로이드 내에 OpenAI 파인튜닝으로 보이스 데이터를 명령어로 변환해서 자바로 보내줌(자바UDP서버)<br>
+링크: https://ai.google.dev/api?hl=ko&lang=android#java
+2. 자바 서버에서 USB 포트로 아두이노에 명령어 전송(시리얼 통신)
