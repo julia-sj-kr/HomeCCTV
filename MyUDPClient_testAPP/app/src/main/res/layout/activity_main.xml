@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="명령어를 입력해주세요."
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="send"
+        android:text="명령어 보내기" />
+
+    <Button
+        android:id="@+id/UP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="upCmd"
+        android:text="UP" />
+
+    <Button
+        android:id="@+id/DOWN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="downCmd"
+        android:text="DOWN" />
+
+    <Button
+        android:id="@+id/LEFT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LEFT" />
+
+    <Button
+        android:id="@+id/RIGHT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RIGHT" />
+</LinearLayout>
