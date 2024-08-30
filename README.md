@@ -212,7 +212,9 @@ IP위에 두개의 TCP나 UDP가 있고 그 위에 쭈욱 사용자 정의가 �
 다른 전화기 설치(br>
 참고 사이트: https://www.microsip.org/<br>
 
-자바 전화기, 안드로이드 전화기, 아이폰 전화기 등 전화기 앱 다운로드 사이트
+자바 전화기, 안드로이드 전화기, 아이폰 전화기 등 전화기 앱 다운로드 사이트<br>
+안드로이드 SIP 라이브러리 다운로드, Sample project 다운로드<br>
+참고 사이트: https://www.mizu-voip.com/Software/SIPSDK/AndroidSIPSDK.aspx
 
 
 
