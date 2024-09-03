@@ -164,7 +164,7 @@ https://fazecast.github.io/jSerialComm/?source=post_page-----c5d9741aa263-------
 [intellij]-[파일]-[프로젝트구조]-[모듈]-[종속요소]-[+]-[1.JARs or Directories]
 
 -------------------------------------------------------------------------------------------------------------------------
-### Task 05 CCTV 화면 움직임 기능 구현하기 using 음성인식
+### [Task 05 CCTV 화면 움직임 기능 구현하기 using 음성인식](https://github.com/julia-sj-kr/VoiceRecognitionApp)
 
 링크: android-speech-to-text
 
