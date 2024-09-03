@@ -166,12 +166,6 @@ https://fazecast.github.io/jSerialComm/?source=post_page-----c5d9741aa263-------
 -------------------------------------------------------------------------------------------------------------------------
 ### [Task 05 CCTV 화면 움직임 기능 구현하기 using 음성인식](https://github.com/julia-sj-kr/VoiceRecognitionApp)
 
-링크: android-speech-to-text
-
-https://medium.com/voice-tech-podcast/android-speech-to-text-tutorial-8f6fa71606ac
-
-음성인식하기
-
 약속된 명령어를 음성으로 통신을 통해서 보내기
 
 -------------------------------------------------------------------------------------------------------------------------
