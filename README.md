@@ -187,6 +187,9 @@ b. Gemini API는 자바 언어 지원(2번의 통신이 필요)<br>
 링크: https://ai.google.dev/api?hl=ko&lang=android#java
 2. 자바 서버에서 USB 포트로 아두이노에 명령어 전송(시리얼 통신)
 
+![image](https://github.com/user-attachments/assets/6c6ca3ef-5f4d-4c50-baf7-71c6c7fab78a)
+![image](https://github.com/user-attachments/assets/2125cb79-f165-425f-bf16-28f50509485c)
+
 -------------------------------------------------------------------------------------------------------------------------
 ### Task 07 IP를 통한 음성 송수신
 
