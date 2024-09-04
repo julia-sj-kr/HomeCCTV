@@ -191,7 +191,7 @@ b. Gemini API는 자바 언어 지원(2번의 통신이 필요)<br>
 ![image](https://github.com/user-attachments/assets/2125cb79-f165-425f-bf16-28f50509485c)
 
 -------------------------------------------------------------------------------------------------------------------------
-### Task 07 IP를 통한 음성 송수신
+### [Task 07 IP를 통한 음성 송수신](https://github.com/julia-sj-kr/Networking)
 
 수업 내용 보충을 위한 챗지피티 질문 링크: https://chatgpt.com/c/0150a406-7a4a-4b2b-9fe5-77c76372b7d0
 
