@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <ToggleButton
+        android:id="@+id/toggleButton1"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/gradation"
+        android:textColor="#36454F"
+        android:textOff="전등1\nOFF"
+        android:textOn="전등1\nON"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/toggleButton3"
+        app:layout_constraintEnd_toStartOf="@id/toggleButton2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton2"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/gradation"
+        android:textColor="#36454F"
+        android:textOff="전등2\nOFF"
+        android:textOn="전등2\nON"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/toggleButton4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/toggleButton1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton3"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/gradation"
+        android:textColor="#36454F"
+        android:textOff="전등3\nOFF"
+        android:textOn="전등3\nON"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/toggleButton5"
+        app:layout_constraintEnd_toStartOf="@id/toggleButton4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toggleButton1" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton4"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/gradation"
+        android:textColor="#36454F"
+        android:textOff="전등4\nOFF"
+        android:textOn="전등4\nON"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/toggleButton6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/toggleButton3"
+        app:layout_constraintTop_toBottomOf="@id/toggleButton2" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton5"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/gradation"
+        android:textColor="#36454F"
+        android:textOff="전등5\nOFF"
+        android:textOn="전등5\nON"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/toggleButton6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toggleButton3"
+        android:visibility="invisible" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton6"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/gradation"
+        android:textColor="#36454F"
+        android:textOff="전등6\nOFF"
+        android:textOn="전등6\nON"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/toggleButton5"
+        app:layout_constraintTop_toBottomOf="@id/toggleButton4"
+        android:visibility="invisible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

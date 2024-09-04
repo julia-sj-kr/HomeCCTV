@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- ON 상태 -->
+    <item android:state_checked="true">
+        <shape>
+            <gradient
+                android:angle="20"
+                android:centerColor="#EFDD3D"
+                android:endColor="#FFB300"
+                android:startColor="#FFB300"
+                android:type="linear" /> <!-- 내부 색상 (배경색) -->
+            <stroke
+                android:width="0dp"
+                android:color="#2196F3" /> <!-- 테두리 색상과 두께 -->
+            <padding
+                android:left="2dp"
+                android:top="2dp"
+                android:right="2dp"
+                android:bottom="2dp" />
+            <corners android:radius="30dp" /> <!-- 모서리 둥글기 -->
+        </shape>
+    </item>
+
+    <!-- OFF 상태 -->
+    <item android:state_checked="false">
+        <shape>
+            <gradient
+                android:angle="20"
+                android:centerColor="#A9A9A9" /><!-- 밝은 회색 -->
+            android:endColor="#36454F" <!-- 어두운 회색 -->
+            android:startColor="#808080" /> <!-- 중간 회색 -->
+            <stroke
+                android:width="2dp"
+                android:color="#36454F" /> <!-- 테두리 색상과 두께 -->
+            <padding
+                android:left="2dp"
+                android:top="2dp"
+                android:right="2dp"
+                android:bottom="2dp" />
+            <corners android:radius="30dp" /> <!-- 모서리 둥글기 -->
+        </shape>
+    </item>
+</selector>

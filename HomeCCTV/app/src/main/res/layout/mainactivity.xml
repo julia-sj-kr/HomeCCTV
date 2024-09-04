@@ -25,12 +25,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="전등제어" />
+        android:onClick="lightbtnclicked"
+        android:text="전등 on/off" />
 
     <Button
-        android:id="@+id/temper_btn"
+        android:id="@+id/call_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="온도확인" />
+        android:onClick="callbtnclicked"
+        android:text="보이스톡" />
+
+
+    <Button
+        android:id="@+id/etc_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="전자제품 on/off" />
 </LinearLayout>

@@ -16,5 +16,20 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../opencv/build/java/opencv-4100.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <NATIVE>
+          <root url="file://$MODULE_DIR$/../opencv/build/java/x64" />
+        </NATIVE>
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../opencv/build/java/opencv-4100.jar!/" />
+          <root url="jar://$MODULE_DIR$/../opencv/build/java/opencv-4100.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>

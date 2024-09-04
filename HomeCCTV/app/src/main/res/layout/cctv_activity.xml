@@ -77,6 +77,28 @@
             android:gravity="center"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/speak_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="#676268"
+                android:hint="방향 버튼을 누르거나 음성으로 말해주세요."
+                android:padding="8dp"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/speak_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="speakBtn"
+                android:text="음성 인식 시작" />
+
             <Button
                 android:id="@+id/buttonUp"
                 android:layout_width="wrap_content"
@@ -96,6 +118,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="20dp"
+                    android:onClick="leftCmd"
                     android:text="Left" />
 
                 <Button
@@ -103,6 +126,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
+                    android:onClick="rightCmd"
                     android:text="Right" />
             </LinearLayout>
 
@@ -114,17 +138,6 @@
                 android:onClick="downCmd"
                 android:text="Down" />
 
-            <TextView
-                android:id="@+id/voice_TextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginRight="20dp"
-                android:background="#676268"
-                android:hint="위, 아래, 왼쪽, 오른쪽 명령어 중 하나를 말해주세요."
-                android:padding="8dp"
-                android:textSize="17sp" />
         </LinearLayout>
 
 
