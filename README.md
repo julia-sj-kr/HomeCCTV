@@ -1,8 +1,8 @@
 # 인공지능 홈CCTV 모바일 제어 시스템
 
 ### 목차
-1. [로그인 기능 (Login Activity)](#로그인-기능-login-activity---task-01)
-2. [메인화면 (Main Activity)](#Task-02-메인화면-구성하기)
+1. [로그인 기능 (Login Activity)](#task-01-사용자가-입력한-id와-비밀번호를-확인하고-올바르다면-메인-페이지로-이동하는-로직을-구현하기)
+2. [메인화면 (Main Activity)](#task-02-메인화면-구성하기)
 3. CCTV제어(CCTV Acticity)<br>
    3.1 [CCTV 영상 송출 기능 구현하기](#task-03-cctv-영상-송출-기능-구현하기)<br>
    3.2 [CCTV 화면 방향 조정 기능 구현하기 using button](#task-04-cctv-화면-움직임-기능-구현하기-using-button)<br>
@@ -14,12 +14,9 @@
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/9f2a1491-147a-4d56-b458-6500697dbaa8" alt="image" width="200">
-    <img src="data:image/gif;base64,R0lGODlhEAAQAMIAAAAAAP///wAAACH5BAkKAAEALAAAAAAQABAAAAjAIBRAA7" width="20" alt="spacer"/> <!-- 여기에 추가 간격을 조정할 수 있습니다 -->
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- 여기에 간격을 조정할 수 있습니다 -->
     <img src="https://github.com/user-attachments/assets/b1b619d1-9d04-440c-a7ee-1415bbf0d1a2" alt="image" width="200"/>
 </p>
-
-
-
 
 a. 회원가입 대화상자에서 사용자가 입력한 ID와 비밀번호 저장하기
 
