@@ -13,9 +13,9 @@
 ### Task 01 사용자가 입력한 ID와 비밀번호를 확인하고, 올바르다면 메인 페이지로 이동하는 로직을 구현하기
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/9f2a1491-147a-4d56-b458-6500697dbaa8" alt="image" width="200">
+    <img src="https://github.com/user-attachments/assets/4e59ef15-dcbd-4e9c-a322-094f80edd8f5" alt="image" width="200">
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- 여기에 간격을 조정할 수 있습니다 -->
-    <img src="https://github.com/user-attachments/assets/b1b619d1-9d04-440c-a7ee-1415bbf0d1a2" alt="image" width="200"/>
+    <img src="https://github.com/user-attachments/assets/f96a91ad-58a8-4060-a538-99b8b3a1adae" alt="image" width="200"/>
 </p>
 
 a. 회원가입 대화상자에서 사용자가 입력한 ID와 비밀번호 저장하기
