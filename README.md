@@ -8,32 +8,18 @@
    3.2 [CCTV 화면 방향 조정 기능 구현하기 using button](#task-04-cctv-화면-움직임-기능-구현하기-using-button)<br>
    3.3 [CCTV 화면 방향 조정 기능 구현하기 using 음성인식](#task-05-cctv-화면-움직임-기능-구현하기-using-음성인식)<br>
 
--------------------------------------------------------------------------------------------------------------------------   
-1. 로그인 기능(Login Acticity)
-2. 메인화면(main Acticity)
-CCTV 제어
-전등제어
-집안온도확인
-3. CCTV제어(CCTV Acticity)
-JPEG 파일 주고 받는 예제 활용
-거실, 아기방, 펫방, 상하좌우 회전 기능, 침입 감지 기능(리눅스 서버에서 구현) 음성 통신 기능(선택)
-4. 전등 제어(Light Acticity)
-(거실, 안방, 작은방1, 작은방2, 주방)
-5. 집안 온도 확인(Temp Acticity)
-(거실, 안방, 작은방1, 작은방2, 주방)
--------------------------------------------------------------------------------------------------
-1. 로그인 기능(Login Acticity)
-2. 메인화면(main Acticity)<br>
-CCTV 제어<br>
-전등 on/off<br>
-전자제품 on/off<br>
-3. CCTV제어(CCTV Acticity)<br>
-4개 영상 수신<br>
-음성 통신 기능<br>
-영상 선택하면 확대<br>
-선택 영상에서 상하좌우 화면 움직임(버튼 리모컨, 음성 명령)
+
 ---------------------------------------------------------------------------------------------------------------------
 ### Task 01 사용자가 입력한 ID와 비밀번호를 확인하고, 올바르다면 메인 페이지로 이동하는 로직을 구현하기
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/9f2a1491-147a-4d56-b458-6500697dbaa8" alt="image" width="200">
+    <img src="data:image/gif;base64,R0lGODlhEAAQAMIAAAAAAP///wAAACH5BAkKAAEALAAAAAAQABAAAAjAIBRAA7" width="20" alt="spacer"/> <!-- 여기에 추가 간격을 조정할 수 있습니다 -->
+    <img src="https://github.com/user-attachments/assets/b1b619d1-9d04-440c-a7ee-1415bbf0d1a2" alt="image" width="200"/>
+</p>
+
+
+
 
 a. 회원가입 대화상자에서 사용자가 입력한 ID와 비밀번호 저장하기
 
