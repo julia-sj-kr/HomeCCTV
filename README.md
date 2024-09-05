@@ -1,5 +1,7 @@
 # 인공지능 홈CCTV 모바일 제어 시스템
 
+로컬 서버 기반으로 제어할 수 있는 홈CCTV 애플리케이션입니다.
+
 ### 목차
 1. [로그인 기능 (Login Activity)](#task-01-사용자가-입력한-id와-비밀번호를-확인하고-올바르다면-메인-페이지로-이동하는-로직을-구현하기)
 2. [메인화면 (Main Activity)](#task-02-메인화면-구성하기)
@@ -48,9 +50,11 @@ Android에서 페이지 간 이동은 Intent를 사용하여 다른 액티비티
     <img src="https://github.com/user-attachments/assets/ceaa1bdf-fcbd-4ec1-8e03-9756a9076d81" alt="image" width="200">
 </p>
 
-CCTV 확인, 전등 제어, 통화 버튼 생성
-
 버튼을 누르면 Intent를 사용하여 각각의 액티비티로 이동
+- CCTV: 총 4개의 화면 수신, 화면을 클릭하면 해당 화면이 확대되고 버튼 또는 음성으로 화면 각도 제어
+- 전등 ON/OFF: 포트로 연결된 아두이노 LED 등 제어
+- 보이스톡: SIP(Session Initiation Protocol)을 사용하여 음성 통화
+- 전자제품 on/off: 향후 기능 추가(마이크로컨트롤러를 사용하여 전자기기와 연결하여 원격으로 제어)
 
 :x: 문제발생1<br>
 CCTV 액티비티로 이동 후 back 했을때 메인화면에 ANR 오류가 발생(앱이 응답하지 않음)
