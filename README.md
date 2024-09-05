@@ -49,7 +49,7 @@ CCTV 확인, 전등 제어, 통화 버튼 생성
 
 버튼을 누르면 Intent를 사용하여 각각의 액티비티로 이동
 
-:x: 문제사항1<br>
+:x: 문제발생1<br>
 CCTV 액티비티로 이동 후 back 했을때 메인화면에 ANR 오류가 발생(앱이 응답하지 않음)
 영상 수신 문제로 가정됨. 4개의 화면 뷰에 영상이 모두 수신될때는 오류가 발생하지 않는데 일부 뷰에 영상 수신이 되지 않을때 메인 액티비티로 돌아가면 ANR 문제 발생
 
@@ -71,7 +71,7 @@ a. Public ip camera url에서 영상 수신하기
 링크: 원격 카메라 링크 모음
 https://github.com/fury999io/public-ip-cams?tab=readme-ov-file
 
-:x: 문제사항2<br>
+:x: 문제발생2<br>
 a-1. VideoView 클래스 => 실패
 
 ````````````````````````````````
@@ -85,7 +85,9 @@ videoView1 = findViewById(R.id.videoView1);
         videoView1.start();
 ````````````````````````````````
 
-:white_check_mark: a-2. SurfaceView 상속받아 커스텀 뷰 생성하여 동영상 이미지 그려주기
+:white_check_mark: 해결
+
+a-2. SurfaceView 상속받아 커스텀 뷰 생성하여 동영상 이미지 그려주기
 
 
 참고링크: 안드로이드로 원격 카메라 영상 가져오는 코드(2013년도 코드로 일부 수정필요)
