@@ -44,6 +44,9 @@ Android에서 페이지 간 이동은 Intent를 사용하여 다른 액티비티
 
 ---------------------------------------------------------------------------------------------------------------------
 ### Task 02 메인화면 구성하기
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/ceaa1bdf-fcbd-4ec1-8e03-9756a9076d81" alt="image" width="200">
+</p>
 
 CCTV 확인, 전등 제어, 통화 버튼 생성
 
