@@ -1,4 +1,7 @@
-# 인공지능 홈CCTV 모바일 제어 시스템
+<div align="center">
+   
+![header](https://capsule-render.vercel.app/api?type=Wave&color=0:56CCF2,100:2F80ED&height=230&section=header&text=인공지능%20홈CCTV%20모바일%20제어%20시스템&fontSize=50&fontAlignY=35&fontColor=FFFFFF)
+</div>
 
 로컬 서버 기반으로 제어할 수 있는 홈CCTV 애플리케이션입니다.
 
