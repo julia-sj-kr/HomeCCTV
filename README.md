@@ -198,6 +198,12 @@ b. Gemini API는 자바 언어 지원(2번의 통신이 필요)<br>
 -----------------
 ### Task 07 전등 제어
 
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/3402e90a-70de-48a5-8d47-231275b60f87" alt="image" width="200"/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- 여기에 간격을 조정할 수 있습니다 -->
+    <img src="https://github.com/user-attachments/assets/0d1816d9-ec59-444b-802e-3a7d4ef8d8d8" alt="image" width="300">
+</p>
+
 안드로이드 앱에서 각 버튼을 클릭하면 UDP 패킷이 서버로 전송되고, 아두이노가 해당 패킷을 수신하여 전등을 제어합니다.<br>
 필요한 경우 IP 주소와 포트 번호를 환경에 맞게 조정해야합니다.
 
