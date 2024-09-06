@@ -1,4 +1,7 @@
-# 인공지능 홈CCTV 모바일 제어 시스템
+<div align="center">
+   
+![header](https://capsule-render.vercel.app/api?type=Wave&color=0:56CCF2,100:2F80ED&height=230&section=header&text=인공지능%20홈CCTV%20모바일%20제어%20시스템&fontSize=50&fontAlignY=35&fontColor=FFFFFF)
+</div>
 
 로컬 서버 기반으로 제어할 수 있는 홈CCTV 애플리케이션입니다.
 
@@ -10,7 +13,7 @@
    3.2 [CCTV 화면 방향 움직임 기능 구현하기 using button](#task-04-cctv-화면-움직임-기능-구현하기-using-button)<br>
    3.3 [CCTV 화면 방향 움직임 기능 구현하기 using 음성인식](#task-05-cctv-화면-움직임-기능-구현하기-using-음성인식)<br>
 4. [전등 제어 (Light Activity)](#task-07-전등-제어)
-5. [음성 통신(Call Activity)](#task-08-IP를-통한-음성-송수신)
+5. [음성 통신(Call Activity)](#task-08-음성-통신)
 
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -198,30 +201,23 @@ b. Gemini API는 자바 언어 지원(2번의 통신이 필요)<br>
 -----------------
 ### Task 07 전등 제어
 
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/3402e90a-70de-48a5-8d47-231275b60f87" alt="image" width="200"/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- 여기에 간격을 조정할 수 있습니다 -->
+    <img src="https://github.com/user-attachments/assets/0d1816d9-ec59-444b-802e-3a7d4ef8d8d8" alt="image" width="300">
+</p>
+
 안드로이드 앱에서 각 버튼을 클릭하면 UDP 패킷이 서버로 전송되고, 아두이노가 해당 패킷을 수신하여 전등을 제어합니다.<br>
 필요한 경우 IP 주소와 포트 번호를 환경에 맞게 조정해야합니다.
 
 ----------------------------------------------------------------------------------------------------
-### [Task 08 IP를 통한 음성 송수신](https://github.com/julia-sj-kr/Networking)
+### [Task 08 음성 통신](https://github.com/julia-sj-kr/Networking)
 
-수업 내용 보충을 위한 챗지피티 질문 링크: https://chatgpt.com/c/0150a406-7a4a-4b2b-9fe5-77c76372b7d0
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/ce5cbfe8-1c03-484d-88d6-0ce397bfd933" alt="image" width="500">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- 여기에 간격을 조정할 수 있습니다 -->
+    <img src="https://github.com/user-attachments/assets/74678ad2-5cd2-422a-9c6c-494c4504e0b4" alt="image" width="200"/>
+</p>
 
-전화기 서버를 우리가 만들 수 있다.<br>
-음성통신 서비스를 제공한다면 리눅스로 서버를 구축해 놓거나 아마존같은 곳에서 대여해서 구축할 수 있다.<br>
-참고 사이트: https://blog.naver.com/romanst/220635666592<br>
-
-FTP도 TCP방식 중 하나다.<br>
-IP위에 두개의 TCP나 UDP가 있고 그 위에 쭈욱 사용자 정의가 있다?<br>
-
-미니 SIP 서버 설치<br>
-참고 사이트: https://www.myvoipapp.com/<br>
-
-다른 전화기 설치(br>
-참고 사이트: https://www.microsip.org/<br>
-
-자바 전화기, 안드로이드 전화기, 아이폰 전화기 등 전화기 앱 다운로드 사이트<br>
-안드로이드 SIP 라이브러리 다운로드, Sample project 다운로드<br>
-참고 사이트: https://www.mizu-voip.com/Software/SIPSDK/AndroidSIPSDK.aspx
-
----------------------------------------
+IP를 통한 음성 송수신
 
