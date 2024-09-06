@@ -10,7 +10,7 @@
    3.2 [CCTV 화면 방향 움직임 기능 구현하기 using button](#task-04-cctv-화면-움직임-기능-구현하기-using-button)<br>
    3.3 [CCTV 화면 방향 움직임 기능 구현하기 using 음성인식](#task-05-cctv-화면-움직임-기능-구현하기-using-음성인식)<br>
 4. [전등 제어 (Light Activity)](#task-07-전등-제어)
-5. [음성 통신(Call Activity)](#task-08-IP를-통한-음성-송수신)
+5. [음성 통신(Call Activity)](#task-08-음성-통신)
 
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -202,7 +202,7 @@ b. Gemini API는 자바 언어 지원(2번의 통신이 필요)<br>
 필요한 경우 IP 주소와 포트 번호를 환경에 맞게 조정해야합니다.
 
 ----------------------------------------------------------------------------------------------------
-### [Task 08 IP를 통한 음성 송수신](https://github.com/julia-sj-kr/Networking)
+### [Task 08 음성 통신](https://github.com/julia-sj-kr/Networking)
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/ce5cbfe8-1c03-484d-88d6-0ce397bfd933" alt="image" width="600">
@@ -210,5 +210,5 @@ b. Gemini API는 자바 언어 지원(2번의 통신이 필요)<br>
     <img src="https://github.com/user-attachments/assets/74678ad2-5cd2-422a-9c6c-494c4504e0b4" alt="image" width="200"/>
 </p>
 
-
+IP를 통한 음성 송수신
 
