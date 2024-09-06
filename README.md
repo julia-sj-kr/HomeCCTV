@@ -211,7 +211,7 @@ b. Gemini API는 자바 언어 지원(2번의 통신이 필요)<br>
 ### [Task 08 음성 통신](https://github.com/julia-sj-kr/Networking)
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/ce5cbfe8-1c03-484d-88d6-0ce397bfd933" alt="image" width="600">
+    <img src="https://github.com/user-attachments/assets/ce5cbfe8-1c03-484d-88d6-0ce397bfd933" alt="image" width="500">
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- 여기에 간격을 조정할 수 있습니다 -->
     <img src="https://github.com/user-attachments/assets/74678ad2-5cd2-422a-9c6c-494c4504e0b4" alt="image" width="200"/>
 </p>
