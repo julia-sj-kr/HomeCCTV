@@ -20,25 +20,26 @@ import com.mizuvoip.jvoip.SIPNotification;
 import com.mizuvoip.jvoip.SIPNotificationListener;
 import com.mizuvoip.jvoip.SipStack;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.TimeZone;
 
 public class VoiceTalkActivity extends AppCompatActivity
 {
     public static String LOGTAG = "AJVoIP";
-    EditText mParams = null;
+    TextView mParams = null;
     EditText mDestNumber = null;
-    Button mBtnStart = null;
     Button mBtnCall = null;
     Button mBtnHangup = null;
     Button mBtnTest = null;
-    Button mBtnBack=null;
     TextView mStatus = null;
     TextView mNotifications = null;
     SipStack mysipclient = null;
     Context ctx = null;
 
     public static VoiceTalkActivity instance = null;
+
+    private StringBuilder parameters = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -48,13 +49,11 @@ public class VoiceTalkActivity extends AppCompatActivity
         ctx = this;
         instance = this;
 
-        mParams = (EditText) findViewById(R.id.parameters_view);
+        mParams = (TextView) findViewById(R.id.parameters_view);
         mDestNumber = (EditText) findViewById(R.id.dest_number);
-        mBtnStart = (Button) findViewById(R.id.btn_start);
         mBtnCall = (Button) findViewById(R.id.btn_call);
         mBtnHangup = (Button) findViewById(R.id.btn_hangup);
         mBtnTest = (Button) findViewById(R.id.btn_test);
-        mBtnBack=(Button) findViewById(R.id.backBtn);
         mStatus = (TextView) findViewById(R.id.status);
         mNotifications = (TextView) findViewById(R.id.notifications);
         mNotifications.setMovementMethod(new ScrollingMovementMethod());
@@ -64,9 +63,7 @@ public class VoiceTalkActivity extends AppCompatActivity
         //SIP stack parameters separated by CRLF. Will be passed to AJVoIP with the SetParameters API call (you might  use the SetParameter API instead to pass the parameters separately)
         //Add other settings after your needs. See the documentation "Parameters" chapter for the full list of available settings.
 
-        //default parameters:
-
-        StringBuilder parameters = new StringBuilder();
+        parameters = new StringBuilder();
 
         //parameters.append("loglevel=5\r\n"); //for development you should set the loglevel to 5.
         parameters.append("loglevel=1\r\n"); //for production you should set the loglevel to 1.
@@ -74,18 +71,20 @@ public class VoiceTalkActivity extends AppCompatActivity
         parameters.append("username=103\r\n");
         parameters.append("password=103\r\n");
 
-        mParams.setText(parameters.toString());
-        mDestNumber.setText("number"); //default call-to number for test
+        // ArrayList 사용
+        ArrayList<String> userinfo = new ArrayList<>();
+
+        userinfo.add("서버주소=192.168.0.100");
+        userinfo.add("나의번호=103");
+
+    // 줄바꿈을 사용해 리스트의 요소를 하나의 문자열로 연결
+        mParams.setText(String.join("\n", userinfo));
+
 
         DisplayStatus("Ready.");
 
-        mBtnStart.setOnClickListener(new View.OnClickListener()
-        {
-            public void onClick(View v)  //Start button click
-            {
-                DisplayLogs("Start on click");
-
-                try{
+        //SIP 스택을 시작함.
+        try{
                     // start SipStack if it's not already running
                     if (mysipclient == null) //check if AJVoIP instance already exists
                     {
@@ -114,9 +113,8 @@ public class VoiceTalkActivity extends AppCompatActivity
                     {
                         DisplayLogs("SIPStack already started");
                     }
-                }catch (Exception e) { DisplayLogs("ERROR, StartSIPStack"); }
-            }
-        });
+        }catch (Exception e) { DisplayLogs("ERROR, StartSIPStack"); }
+
 
         mBtnCall.setOnClickListener(new View.OnClickListener()
         {
@@ -175,20 +173,12 @@ public class VoiceTalkActivity extends AppCompatActivity
                 if (mysipclient == null)
                     DisplayStatus("ERROR, SipStack not started");
                 else
+                    //SetSpeakerMode는 SIP 관련 기능을 제공하는 라이브러리(이 경우 Mizu VoIP)에서 정의된 메서드로,
+                    // 이 라이브러리를 사용하는 개발자는 이 메서드를 호출하여 스피커 모드를 제어할 수 있습니다.
                     mysipclient.SetSpeakerMode(!mysipclient.IsLoudspeaker());
             }
         });
 
-        mBtnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view)
-            {
-                finish();
-                Intent intent=new Intent(VoiceTalkActivity.this, MainActivity.class);
-                startActivity(intent);
-
-            }
-        });
     }
 
     /**
@@ -196,7 +186,7 @@ public class VoiceTalkActivity extends AppCompatActivity
      */
     public void SetParameters()
     {
-        String params = mParams.getText().toString();
+        String params = parameters.toString();
         if (params == null || mysipclient == null) return;
         params = params.trim();
 
