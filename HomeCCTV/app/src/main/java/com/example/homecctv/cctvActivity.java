@@ -99,6 +99,15 @@ public class cctvActivity extends AppCompatActivity {
 
     }
 
+//    protected void onDestroy() {
+//        super.onDestroy();
+//
+//        cctvView1.stopStreaming();
+//        cctvView2.stopStreaming();
+//        cctvView3.stopStreaming();
+//        cctvView4.stopStreaming();
+//    }
+
     //온클릭 함수, 음성 인식 활동 시작
     public void speakBtn(View view) {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
@@ -125,25 +134,25 @@ public class cctvActivity extends AppCompatActivity {
     }
 
     public void upCmd(View view) {
-        String command="U";
+        String command="Up";
         String ip=selected_ip;
         SendMsg(command, ip);
     }
 
     public void downCmd(View view) {
-        String command="D";
+        String command="Down";
         String ip=selected_ip;
         SendMsg(command, ip);
     }
 
     public void leftCmd(View view) {
-        String command="L";
+        String command="Left";
         String ip=selected_ip;
         SendMsg(command, ip);
     }
 
     public void rightCmd(View view) {
-        String command="R";
+        String command="Right";
         String ip=selected_ip;
         SendMsg(command, ip);
     }

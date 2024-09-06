@@ -2,6 +2,7 @@ package com.example.homecctv;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -31,6 +32,7 @@ public class VoiceTalkActivity extends AppCompatActivity
     Button mBtnCall = null;
     Button mBtnHangup = null;
     Button mBtnTest = null;
+    Button mBtnBack=null;
     TextView mStatus = null;
     TextView mNotifications = null;
     SipStack mysipclient = null;
@@ -39,8 +41,7 @@ public class VoiceTalkActivity extends AppCompatActivity
     public static VoiceTalkActivity instance = null;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState){
         //Message messageToMainThread = new Message();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.voicetalk);
@@ -53,6 +54,7 @@ public class VoiceTalkActivity extends AppCompatActivity
         mBtnCall = (Button) findViewById(R.id.btn_call);
         mBtnHangup = (Button) findViewById(R.id.btn_hangup);
         mBtnTest = (Button) findViewById(R.id.btn_test);
+        mBtnBack=(Button) findViewById(R.id.backBtn);
         mStatus = (TextView) findViewById(R.id.status);
         mNotifications = (TextView) findViewById(R.id.notifications);
         mNotifications.setMovementMethod(new ScrollingMovementMethod());
@@ -66,19 +68,14 @@ public class VoiceTalkActivity extends AppCompatActivity
 
         StringBuilder parameters = new StringBuilder();
 
-        parameters.append("loglevel=5\r\n"); //for development you should set the loglevel to 5. for production you should set the loglevel to 1
-        //parameters.append("notificationevents=4\r\n"); //we will use notification event objects only, but no need to set because it is set automatically by SetNotificationListener
-        //parameters.append("startsipstack=1\r\n"); //auto start the sipstack (1/auto is the default)
-        //parameters.append("register=1\r\n"); //auto register (set to 0 if you don't need to register or if you wish to call the Register explicitely later or set to 2 if must register)
-        //parameters.append("proxyaddress=1\r\n"); //set this if you have a (outbound) proxy
-        //parameters.append("transport=0\r\n"); //the default transport for signaling is -1/auto (UDP with failover to TCP). Set to 0 if your server is listening on UDP only, 1 if you need TCP or to 2 if you need TLS
-        //parameters.append("realm=xxx\r\n"); //your sip realm. it might have to be set only if it is different from the serveraddress
+        //parameters.append("loglevel=5\r\n"); //for development you should set the loglevel to 5.
+        parameters.append("loglevel=1\r\n"); //for production you should set the loglevel to 1.
         parameters.append("serveraddress=192.168.0.100\r\n");
         parameters.append("username=103\r\n");
         parameters.append("password=103\r\n");
 
         mParams.setText(parameters.toString());
-        mDestNumber.setText("testivr3"); //default call-to number for our test (testivr3 is a music IVR access number on our test server at voip.mizu-voip.com)
+        mDestNumber.setText("number"); //default call-to number for test
 
         DisplayStatus("Ready.");
 
@@ -181,6 +178,17 @@ public class VoiceTalkActivity extends AppCompatActivity
                     mysipclient.SetSpeakerMode(!mysipclient.IsLoudspeaker());
             }
         });
+
+        mBtnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                finish();
+                Intent intent=new Intent(VoiceTalkActivity.this, MainActivity.class);
+                startActivity(intent);
+
+            }
+        });
     }
 
     /**
@@ -246,7 +254,8 @@ public class VoiceTalkActivity extends AppCompatActivity
             }
         }
 
-        //an example for STATUS handling
+        //onStatus 메서드는 SIP 스택에서 발생하는 상태 알림 이벤트에 의해 자동으로 호출됩니다.
+        // 코드 내에서 직접적으로 보이지 않지만, SIP 통신 과정에서 발생하는 상태 변경 이벤트가 있을 때 해당 메서드가 자동으로 실행됩니다.
         @Override
         public void onStatus(SIPNotification.Status e)
         {

@@ -1,156 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#eee">
+    android:background="@drawable/border_background"
+    android:orientation="vertical">
 
-    <LinearLayout android:orientation="horizontal"
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#fff"
         android:gravity="center_horizontal"
-        android:background="#fff">
+        android:orientation="horizontal">
 
-        <EditText android:id="@+id/parameters_view"
+        <EditText
+            android:id="@+id/parameters_view"
             android:layout_width="fill_parent"
             android:layout_height="80dp"
-            android:inputType="textMultiLine|textNoSuggestions"
             android:gravity="top"
             android:hint="Parameters"
-            android:textSize="14dp"/>
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:textSize="14dp" />
     </LinearLayout>
 
-    <LinearLayout android:orientation="horizontal"
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="12dp"
-        android:background="#fff">
+        android:layout_marginRight="10dp"
+        android:background="#fff"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
 
-        <TextView android:layout_width="0dip"
-            android:layout_weight=".35"
-            android:layout_height="wrap_content"
-            android:singleLine="true"
-            android:gravity="right"
-            android:textSize="16dp"
-            android:text="Call to: "/>
-
-        <EditText android:id="@+id/dest_number"
+        <TextView
             android:layout_width="0dip"
-            android:layout_weight=".65"
             android:layout_height="wrap_content"
+            android:layout_weight=".35"
+            android:gravity="right"
             android:singleLine="true"
-            android:inputType="textNoSuggestions" />
+            android:text="Call to: "
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/dest_number"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight=".65"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true" />
     </LinearLayout>
 
-    <LinearLayout android:orientation="horizontal"
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="12dp"
-        android:background="#fff">
+        android:layout_marginRight="10dp"
+        android:background="#fff"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
 
-        <Button android:id="@+id/btn_start"
+        <Button
+            android:id="@+id/btn_start"
             android:layout_width="0dp"
             android:layout_height="45dp"
-            android:layout_weight=".25"
             android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:layout_weight=".25"
             android:text="Start"
-            android:textSize="18dp"
-            android:layout_marginRight="5dp" />
+            android:textSize="18dp" />
 
-        <Button android:id="@+id/btn_call"
+        <Button
+            android:id="@+id/btn_call"
             android:layout_width="0dp"
             android:layout_height="45dp"
-            android:layout_weight=".25"
             android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:layout_weight=".25"
             android:text="Call"
-            android:textSize="18dp"
-            android:layout_marginRight="5dp" />
+            android:textSize="18dp" />
 
-        <Button android:id="@+id/btn_hangup"
+        <Button
+            android:id="@+id/btn_hangup"
             android:layout_width="0dp"
             android:layout_height="45dp"
-            android:layout_weight=".25"
             android:layout_gravity="center"
+            android:layout_weight=".25"
             android:text="Hangup"
             android:textSize="18dp" />
-        <Button android:id="@+id/btn_test"
+
+        <Button
+            android:id="@+id/btn_test"
             android:layout_width="0dp"
             android:layout_height="45dp"
-            android:layout_weight=".25"
             android:layout_gravity="center"
+            android:layout_weight=".25"
             android:text="Test"
             android:textSize="18dp" />
     </LinearLayout>
 
-    <LinearLayout android:orientation="horizontal"
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="12dp"
-        android:background="#fff">
+        android:layout_marginRight="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
 
-        <TextView android:layout_width="0dip"
-            android:layout_weight=".15"
-            android:layout_height="wrap_content"
-            android:singleLine="true"
-            android:gravity="right"
-            android:textSize="14dp"
-            android:textStyle="bold"
-            android:text="Status: "/>
-
-        <TextView android:id="@+id/status"
+        <TextView
             android:layout_width="0dip"
-            android:layout_weight=".85"
             android:layout_height="wrap_content"
+            android:layout_weight=".15"
+            android:gravity="right"
             android:singleLine="true"
-            android:gravity="left"
+            android:text="Status: "
             android:textSize="14dp"
-            android:textStyle="italic"
-            android:text=""/>
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight=".85"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="14dp"
+            android:textStyle="italic" />
 
     </LinearLayout>
 
-    <LinearLayout android:orientation="horizontal"
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="12dp"
-        android:background="#fff">
+        android:layout_marginRight="10dp"
+        android:background="#fff"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
 
-        <TextView android:layout_width="fill_parent"
-            android:layout_weight="1"
+        <TextView
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:singleLine="true"
-            android:textSize="16dp"
-            android:text="Notifications: "/>
+            android:text="Notifications: "
+            android:textSize="16dp" />
 
     </LinearLayout>
 
-    <ScrollView android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="vertical"
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="400dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="10dp"
         android:fillViewport="true"
-        android:layout_marginTop="2dp">
+        android:orientation="vertical">
 
-        <LinearLayout android:orientation="horizontal"
+        <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:gravity="center_horizontal"
+            android:background="#fff"
             android:focusable="true"
             android:focusableInTouchMode="true"
-            android:background="#fff">
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
 
-            <TextView android:id="@+id/notifications"
+            <TextView
+                android:id="@+id/notifications"
                 android:layout_width="fill_parent"
-                android:layout_weight="1"
                 android:layout_height="fill_parent"
-                android:inputType="textMultiLine|textNoSuggestions"
-                android:gravity="bottom"
                 android:layout_marginTop="5dp"
-                android:textSize="13dp"
-                android:text=""/>
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:text=""
+                android:textSize="13dp" />
+
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"
+        android:text="Back" />
 </LinearLayout>

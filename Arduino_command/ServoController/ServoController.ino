@@ -25,7 +25,7 @@ void loop() {
   if (Serial.available() > 0) {
 
     char command = Serial.read();
-
+    
     Serial.println(command);
     
     switch(command) {
