@@ -204,24 +204,11 @@ b. Gemini API는 자바 언어 지원(2번의 통신이 필요)<br>
 ----------------------------------------------------------------------------------------------------
 ### [Task 08 IP를 통한 음성 송수신](https://github.com/julia-sj-kr/Networking)
 
-수업 내용 보충을 위한 챗지피티 질문 링크: https://chatgpt.com/c/0150a406-7a4a-4b2b-9fe5-77c76372b7d0
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/ce5cbfe8-1c03-484d-88d6-0ce397bfd933" alt="image" width="600">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- 여기에 간격을 조정할 수 있습니다 -->
+    <img src="https://github.com/user-attachments/assets/74678ad2-5cd2-422a-9c6c-494c4504e0b4" alt="image" width="200"/>
+</p>
 
-전화기 서버를 우리가 만들 수 있다.<br>
-음성통신 서비스를 제공한다면 리눅스로 서버를 구축해 놓거나 아마존같은 곳에서 대여해서 구축할 수 있다.<br>
-참고 사이트: https://blog.naver.com/romanst/220635666592<br>
 
-FTP도 TCP방식 중 하나다.<br>
-IP위에 두개의 TCP나 UDP가 있고 그 위에 쭈욱 사용자 정의가 있다?<br>
-
-미니 SIP 서버 설치<br>
-참고 사이트: https://www.myvoipapp.com/<br>
-
-다른 전화기 설치(br>
-참고 사이트: https://www.microsip.org/<br>
-
-자바 전화기, 안드로이드 전화기, 아이폰 전화기 등 전화기 앱 다운로드 사이트<br>
-안드로이드 SIP 라이브러리 다운로드, Sample project 다운로드<br>
-참고 사이트: https://www.mizu-voip.com/Software/SIPSDK/AndroidSIPSDK.aspx
-
----------------------------------------
 
