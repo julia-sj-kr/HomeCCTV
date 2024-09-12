@@ -12,6 +12,7 @@ import android.view.SurfaceView;
 
 import androidx.annotation.NonNull;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -56,7 +57,10 @@ public class MyHomeCCTV extends SurfaceView implements SurfaceHolder.Callback, R
     public void stopStreaming() {
         threadRunning = false;
         try {
+            Log.v("ANR_TEST","Attempting to join thread...");
             threadSView.join();
+            Log.v("ANR_TEST","Thread successfully joined.");
+
         } catch (InterruptedException e) {
             Log.e("MyHomeCCTV", "Thread interruption error: " + e.getMessage());
         }
@@ -72,19 +76,25 @@ public class MyHomeCCTV extends SurfaceView implements SurfaceHolder.Callback, R
             //URL url = new URL("http://220.233.144.165:8888/mjpg/video.mjpg");
             URL streamUrl = new URL(url);
             HttpURLConnection con = (HttpURLConnection) streamUrl.openConnection();//주소 옮겨주고
+            Log.v("ANR_TEST","TEST");
+
             InputStream in = con.getInputStream();//통신 시작, 네트워크 카드쪽 읽는거
+
             while (threadRunning) {
                 int i = 0;
                 for (; i < 1000; i++) {
                     int b = in.read();//한 바이트를 읽어
                     if (b == 0xff) {//Start OF Image의 시작 바이트
                         int b2 = in.read();//한 바이트를 더 읽어
+                        if (i%100==0&&threadRunning==false){
+                            in.close();
+                            return;}
                         if (b2 == 0xd8)//Start OF Image의 끝 바이트
                             break;
                     }
                 }
                 if (i > 999) {
-                    Log.e("MyHomeCCTV", "Bad head");
+                    Log.e("MyHomeCCTV", "Invalid image header detected.");
                     continue;//=>하면 다시 while문 첫 줄로 감, 천장씩 잘라서 읽는 결과
                 }
                 arr[0] = (byte) 0xff;
@@ -96,6 +106,9 @@ public class MyHomeCCTV extends SurfaceView implements SurfaceHolder.Callback, R
                     if (b == 0xff) {//End OF Image의 시작 바이트
                         i++;
                         int b2 = in.read();
+                        if (i%100==0&&threadRunning==false){
+                            in.close();
+                            return;}
                         arr[i] = (byte) b2;
                         if (b2 == 0xd9) {//End OF Image의 끝 바이트
                             break;
@@ -118,6 +131,7 @@ public class MyHomeCCTV extends SurfaceView implements SurfaceHolder.Callback, R
                     holder.unlockCanvasAndPost(canvas);
                 }
             }
+            in.close();
 
         } catch (Exception e) {
             Log.e("MyHomeCCTV", "Error:" + e.toString());

@@ -63,13 +63,18 @@ public class cctvActivity extends AppCompatActivity {
         // 각 뷰에 사용할 URL 리스트
         String[] urls = {
                 //원격 영상 링크
-                "http://220.233.144.165:8888/mjpg/video.mjpg",
+                "http://195.222.51.206:81/mjpg/video.mjpg",
                 //USB 카메라에서 수신되는 ip 주소, 동일한 네트워크 상에서 출력이 가능하다.
                 //외부에서 내부 네트워크로의 접근을 허용하고 싶다면 포트포워딩
                 //ip 권한을 허용해주는 permission 추가해줘야함.(xml 디렉터리에서 파일 추가하여 도메인 주소 추가)
-                "http://192.168.0.100:8000/camera/mjpeg",
-                "http://192.168.0.109:8000/camera/mjpeg",
-                "http://192.168.0.39:8000/camera/mjpeg",
+                "http://80.75.112.38:9080/axis-cgi/mjpg/video.cgi",
+                "http://80.75.112.38:9080/axis-cgi/mjpg/video.cgi",
+                "http://195.222.51.206:81/mjpg/video.mjpg",
+
+
+//                "http://192.168.0.100:8000/camera/mjpeg",
+//                "http://192.168.0.109:8000/camera/mjpeg",
+//                "http://192.168.0.39:8000/camera/mjpeg",
                 //"http://192.168.137.1:8000/camera/mjpeg",//무선 네트워크 주소
         };
 
@@ -99,14 +104,14 @@ public class cctvActivity extends AppCompatActivity {
 
     }
 
-//    protected void onDestroy() {
-//        super.onDestroy();
-//
-//        cctvView1.stopStreaming();
-//        cctvView2.stopStreaming();
-//        cctvView3.stopStreaming();
-//        cctvView4.stopStreaming();
-//    }
+    protected void onDestroy() {
+        super.onDestroy();
+
+        cctvView1.stopStreaming();
+        cctvView2.stopStreaming();
+        cctvView3.stopStreaming();
+        cctvView4.stopStreaming();
+    }
 
     //온클릭 함수, 음성 인식 활동 시작
     public void speakBtn(View view) {
@@ -222,5 +227,21 @@ public class cctvActivity extends AppCompatActivity {
             gl.setVisibility(View.VISIBLE);
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        // zoomLayout이 보이는 경우, 전체화면을 종료하고 4개의 화면으로 돌아감
+        if (fullLayout.getVisibility() == View.VISIBLE) {
+            fullLayout.setVisibility(View.GONE);
+
+            // zoomLayout에서 모든 뷰 제거
+            zoomLayout.removeAllViews();
+
+            gl.setVisibility(View.VISIBLE);
+        } else {
+            super.onBackPressed(); // 기본 동작 실행
+        }
+    }
+
 }
 
