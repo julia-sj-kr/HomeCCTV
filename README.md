@@ -3,10 +3,13 @@
 ![header](https://capsule-render.vercel.app/api?type=Rounded&color=0:56CCF2,100:2F80ED&height=170&section=header&text=인공지능%20홈CCTV%20모바일%20제어%20시스템&fontSize=50&fontColor=FFFFFF)
 </div>
 
-로컬 서버 기반으로 제어할 수 있는 홈CCTV 애플리케이션입니다.
+**로컬 서버 기반으로 제어할 수 있는 홈CCTV 애플리케이션입니다.**
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/4389dc7a-65ec-4882-bde9-3a99407e0cfd" alt="image" width="700">
+</p>
+<p align="center">
+    <strong>그림1. 음성 명령 처리 및 제어 아키텍처</strong>
 </p>
 
 ### 목차
