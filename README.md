@@ -3,13 +3,22 @@
 ![header](https://capsule-render.vercel.app/api?type=Rounded&color=0:56CCF2,100:2F80ED&height=170&section=header&text=인공지능%20홈CCTV%20모바일%20제어%20시스템&fontSize=50&fontColor=FFFFFF)
 </div>
 
-**로컬 서버 기반으로 제어할 수 있는 홈CCTV 애플리케이션입니다.**
+----
+
+💡**1인 프로젝트**    
+🗓️ **개발기간** `24.08~24.09(1개월)`   
+🛠️ **플랫폼** `Android`  
+📚**기술 스택** `Java (Android 앱 개발)`, `Python (서버 및 OpenAI 연동)`, `Arduino (IoT 제어)`  
+🔧**개발 도구** `Android Studio`, `IntelliJ IDEA`, `Thonny`, `Arduino IDE`  
+<sub> ⚠️ 이 프로그램은 동일한 로컬 네트워크 내에서만 작동하며, 모든 디바이스가 같은 네트워크에 연결되어 있어야 합니다. 원격 접속이 필요할 경우, 포트 포워딩 또는 VPN 설정을 통해 외부 네트워크에서도 접근할 수 있습니다.
+
+----
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/4389dc7a-65ec-4882-bde9-3a99407e0cfd" alt="image" width="700">
 </p>
 <p align="center">
-    <strong>그림1. 음성 명령 처리 및 제어 아키텍처</strong>
+    <strong><음성 명령 처리 및 제어 아키텍처></strong>
 </p>
 
 ### 목차
