@@ -33,9 +33,9 @@
    3.1 [CCTV 영상 수신](#task-03-cctv-영상-수신)<br>
    3.2 [CCTV 화면 방향 움직임 기능 구현하기 using button](#task-04-cctv-화면-움직임-기능-구현하기-using-button)<br>
    3.3 [CCTV 화면 방향 움직임 기능 구현하기 using 음성인식](#task-05-cctv-화면-움직임-기능-구현하기-using-음성인식)<br>
-   3.4 [CCTV 화면 움직임 기능 구현하기 using 음성인식+ 챗 GPT API 활용](#task-05-cctv-화면-움직임-기능-구현하기-using-음성인식+-챗-GPT-API-활용)<br>
-4. [전등 제어 (Light Activity)](#task-07-전등-제어)
-5. [음성 통신(Call Activity)](#task-08-음성-통신)
+   3.4 [CCTV 화면 움직임 기능 구현하기 using 음성인식+ ChatGPT API 활용](#task-06-cctv-화면-움직임-기능-구현하기-using-음성인식-chatgpt-api-활용)<br>
+5. [전등 제어 (Light Activity)](#task-07-전등-제어)
+6. [음성 통신(Call Activity)](#task-08-음성-통신)
 
 
 ---------------------------------------------------------------------------------------------------------------------
