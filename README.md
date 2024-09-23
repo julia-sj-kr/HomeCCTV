@@ -8,7 +8,7 @@
 💡**1인 프로젝트**    
 🗓️ **개발기간** `24.08~24.09(1개월)`   
 🛠️ **플랫폼** `Android`  
-📚**기술 스택** `Java (Android 앱 개발)`, `Python (서버 및 OpenAI 연동)`, `Arduino (IoT 제어)`  
+📚**기술 스택** `Java (Android 앱 개발 및 서버)`, `Python (서버 및 OpenAI 연동)`, `Arduino (IoT 제어)`  
 🔧**개발 도구** `Android Studio`, `IntelliJ IDEA`, `Thonny`, `Arduino IDE`  
 <sub> ⚠️ 이 프로그램은 동일한 로컬 네트워크 내에서만 작동하며, 모든 디바이스가 같은 네트워크에 연결되어 있어야 합니다. 원격 접속이 필요할 경우, 포트 포워딩 또는 VPN 설정을 통해 외부 네트워크에서도 접근할 수 있습니다.
 
