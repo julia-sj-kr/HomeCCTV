@@ -223,8 +223,9 @@ b. UDP 프로토콜을 통해 음성으로 입력된 텍스트 데이터를 네�
 ---------------------------------------------------------------------------------------------------------------------
 ### Task 06 CCTV 화면 움직임 기능 구현하기 using 음성인식+ 챗 GPT API 활용
 
-Task 05에서 음성으로 화면 움직인 제어 하는 기능은 **미리 정의된 명령어**가 입력되었을 때만 작동합니다.   
-이를 확장하여 ChatGPT API를 통해 사용자가 어떤 명령을 내리든 그 의도를 파악하여 정해진 명령어로 변환해주는 기능을 추가하였습니다.  
+Task 05에서 음성으로 화면 움직임 제어 하는 기능은 **미리 정의된 명령어**가 입력되었을 때만 작동합니다.   
+이를 확장하여 ChatGPT API를 통해 **사용자가 어떤 명령을 내리든** 그 의도를 파악하여 정해진 명령어로 변환해주는 기능을 추가하였습니다.  
+현재 프로그램에서는 LLM API로 ChatGPT를 사용하였습니다. Gemini API를 사용하면 Java를 직접 지원하므로, 통신 과정이 한단계 줄어듭니다.
 
 링크: https://github.com/openai/openai-quickstart-python<br>
 
@@ -233,15 +234,16 @@ a. ChatGPT API는 Java를 직접 지원하지 않기 때문에, 3단계 통신�
 파이썬에서 UDP 뚫는 방법 링크: https://w-world.tistory.com/217<br>
 2. 파이썬 서버에서 OpenAI 파인튜닝으로 보이스 데이터를 명령어로 변환해서 자바 서버로 전송(자바UDP서버)<br>
 3. 자바 서버에서 명령어를 USB 포트를 통해 아두이노로 전달(시리얼 통신)
-   
-![image](https://github.com/user-attachments/assets/6c6ca3ef-5f4d-4c50-baf7-71c6c7fab78a)
-![image](https://github.com/user-attachments/assets/2125cb79-f165-425f-bf16-28f50509485c)
 
-b. Gemini API는 Java를 직접 지원하므로, 통신 과정이 더 단순화됩니다.
-1. 안드로이드 내에 OpenAI 파인튜닝으로 보이스 데이터를 명령어로 변환해서 자바로 보내줌(자바UDP서버)<br>
-링크: https://ai.google.dev/api?hl=ko&lang=android#java
-
-2. 자바 서버에서 USB 포트를 통해 아두이노에 명령어 전송(시리얼 통신)
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/6c6ca3ef-5f4d-4c50-baf7-71c6c7fab78a" alt="image" width="300">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- 여기에 간격을 조정할 수 있습니다 -->
+    <img src="https://github.com/user-attachments/assets/2125cb79-f165-425f-bf16-28f50509485c" alt="image" width="400"/>
+</p>
+b. Gemini API는 Java를 직접 지원하므로, 통신 과정이 더 단순화됩니다.<br>
+1. 안드로이드에서 Gemini API를 통해 보이스 데이터를 명령어로 변환해서 자바 서버로 전송(자바UDP서버)<br>
+링크: https://ai.google.dev/api?hl=ko&lang=android#java<br>
+2. 자바 서버에서 명령어를 USB 포트를 통해 아두이노로 전달(시리얼 통신)
 
 -----------------
 ### Task 07 전등 제어
