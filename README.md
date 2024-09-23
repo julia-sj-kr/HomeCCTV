@@ -234,9 +234,9 @@ a. ChatGPT API는 Java를 직접 지원하지 않기 때문에, 3단계 통신�
 <p align="center">
     <img src="https://github.com/user-attachments/assets/5c7fa352-bdae-4098-acd5-51f16dc964c5" alt="image" width="200">
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- 여기에 간격을 조정할 수 있습니다 -->
-    <img src="https://github.com/user-attachments/assets/6c6ca3ef-5f4d-4c50-baf7-71c6c7fab78a" alt="image" width="280">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- 여기에 간격을 조정할 수 있습니다 -->
     <img src="https://github.com/user-attachments/assets/2125cb79-f165-425f-bf16-28f50509485c" alt="image" width="380"/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- 여기에 간격을 조정할 수 있습니다 -->
+   <img src="https://github.com/user-attachments/assets/6c6ca3ef-5f4d-4c50-baf7-71c6c7fab78a" alt="image" width="280">
 </p>
 b. Gemini API는 Java를 직접 지원하므로, 통신 과정이 더 단순화됩니다.<br>
 1. 안드로이드에서 Gemini API를 통해 보이스 데이터를 명령어로 변환해서 자바 서버로 전송(자바UDP서버)<br>
