@@ -194,9 +194,12 @@ c. 핸드폰 영상 수신하기
 
 
 https://github.com/user-attachments/assets/e667d3b1-ead7-4d72-a050-639cb365f689
+<p align="center">
+       <img src="https://github.com/user-attachments/assets/1161979b-89d2-428a-be46-2411a6954ad5">
+</p>
 
+https://github.com/user-attachments/assets/918b228a-7b34-4d42-8e4a-0f5ae4d90836
 
-https://github.com/user-attachments/assets/8223baae-3347-4bb8-bb88-20738a184ade
 
 
 
