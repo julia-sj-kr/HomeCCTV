@@ -107,10 +107,11 @@ CCTV 액티비티로 이동 후 back 했을때 메인화면에 ANR(Application N
 ### [Task 03 CCTV 영상 수신](https://github.com/julia-sj-kr/Image-Processing)
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/175d2cad-22c8-4226-b213-0a881a80d02b" alt="image" width="200">
+    <img src="https://github.com/user-attachments/assets/cc4631d4-4e33-4b04-9ecc-04749548c36d" alt="image" width="200">
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- 여기에 간격을 조정할 수 있습니다 -->
-    <img src="https://github.com/user-attachments/assets/76f99612-e900-4f97-bcfe-96b64a4aa9d0" alt="image" width="200"/>
+    <img src="https://github.com/user-attachments/assets/6e078b57-c61a-4821-9f3f-1d772cd8bb77" alt="image" width="200"/>
 </p>
+
 
 CCTV 액티비티 화면 UI 구현:
 
