@@ -86,10 +86,10 @@ Android에서 페이지 간 이동은 Intent를 사용하여 다른 액티비티
 - 보이스톡: SIP(Session Initiation Protocol)을 사용하여 음성 통화
 - 전자제품 on/off: 향후 기능 추가(마이크로컨트롤러를 사용하여 전자기기와 연결하여 원격으로 제어)
 
-:x: 문제발생1<br>
+:x: __Challenges__<br>
 CCTV 액티비티로 이동 후 back 했을때 메인화면에 ANR(Application Not Responding) 오류가 발생.    
 
-:white_check_mark: 해결과정1
+:white_check_mark: __Solutions__  
 - 영상 수신 파트에서 여러가지 가정을 두고 관련 코드 사이에 로그메시지를 체크하면서 원인을 파악.
   - 가정1: 4개의 화면 중 하나 이상의 영상이 수신되지 않을때 문제 발생 => 2초 시간 내에 연결이 이루어지지 않거나 데이터가 읽히지 않으면 예외가 발생하도록 코드 보완하였으나 문제 해결되지 않음.
   - 가정2: 스레드 영상을 Join하는 것이 시간이 오래 걸려 그 시간동안 UI 스레드가 블로킹되어 문제 발생 => Join 코드를 주석처리하고 재실행 하였으나 문제 해결되지 않음.  
@@ -126,7 +126,7 @@ a. Public ip camera url에서 영상 수신하기
 링크: 원격 카메라 링크 모음
 https://github.com/fury999io/public-ip-cams?tab=readme-ov-file
 
-:x: 문제발생2<br>
+:x: __Challenges__  
 a-1. VideoView 클래스 => 실패
 
 ````````````````````````````````
@@ -140,7 +140,7 @@ videoView1 = findViewById(R.id.videoView1);
         videoView1.start();
 ````````````````````````````````
 
-:white_check_mark: 해결과정2
+:white_check_mark: __Solutions__
 
 a-2. SurfaceView 상속받아 커스텀 뷰 생성하여 동영상 이미지 그려주기
 
