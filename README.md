@@ -122,7 +122,7 @@ CCTV 액티비티 화면 UI 구현:
 여러 비디오를 동시에 재생해야 할 경우, 비동기적으로 로드하는 방식을 권장(스레드 사용)
 각각 다른 동영상 종류(a,b,c)를 수신하는 방법은 아래와 같다.
 
-a. Public ip camera url에서 영상 수신하기
+a. Public ip camera url에서 영상 수신하기  
 링크: 원격 카메라 링크 모음
 https://github.com/fury999io/public-ip-cams?tab=readme-ov-file
 
