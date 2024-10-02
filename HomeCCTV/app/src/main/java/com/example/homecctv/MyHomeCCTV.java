@@ -5,10 +5,12 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.os.Looper;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -16,11 +18,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import android.os.Handler;
 
 public class MyHomeCCTV extends SurfaceView implements SurfaceHolder.Callback, Runnable {
     Thread threadSView;
     boolean threadRunning = true;
     String url;
+    private Handler uiHandler; // Handler 선언
 
     public void setUrl(String url) {
 
@@ -31,6 +35,9 @@ public class MyHomeCCTV extends SurfaceView implements SurfaceHolder.Callback, R
         super(context, attrs);
         getHolder().addCallback(this);
         threadSView = new Thread(this);
+
+        // Handler 초기화
+        uiHandler = new Handler(Looper.getMainLooper()); // UI 스레드와 연동
     }
 
     @Override
@@ -57,9 +64,9 @@ public class MyHomeCCTV extends SurfaceView implements SurfaceHolder.Callback, R
     public void stopStreaming() {
         threadRunning = false;
         try {
-            Log.v("ANR_TEST","Attempting to join thread...");
+            Log.v("ANR_TEST", "Attempting to join thread...");
             threadSView.join();
-            Log.v("ANR_TEST","Thread successfully joined.");
+            Log.v("ANR_TEST", "Thread successfully joined.");
 
         } catch (InterruptedException e) {
             Log.e("MyHomeCCTV", "Thread interruption error: " + e.getMessage());
@@ -76,9 +83,15 @@ public class MyHomeCCTV extends SurfaceView implements SurfaceHolder.Callback, R
             //URL url = new URL("http://220.233.144.165:8888/mjpg/video.mjpg");
             URL streamUrl = new URL(url);
             HttpURLConnection con = (HttpURLConnection) streamUrl.openConnection();//주소 옮겨주고
-            Log.v("ANR_TEST","TEST");
+
+            con.setConnectTimeout(2000); // 2초 연결 타임아웃 설정
+            con.setReadTimeout(2000); // 2초 읽기 타임아웃 설정
+
+            Log.v("ANR_TEST", "Connecting to the CCTV stream at: " + url);
 
             InputStream in = con.getInputStream();//통신 시작, 네트워크 카드쪽 읽는거
+
+            Log.v("ANR_TEST", "Successfully connected to the CCTV stream at: " + url);
 
             while (threadRunning) {
                 int i = 0;
@@ -86,9 +99,10 @@ public class MyHomeCCTV extends SurfaceView implements SurfaceHolder.Callback, R
                     int b = in.read();//한 바이트를 읽어
                     if (b == 0xff) {//Start OF Image의 시작 바이트
                         int b2 = in.read();//한 바이트를 더 읽어
-                        if (i%100==0&&threadRunning==false){
+                        if (i % 100 == 0 && threadRunning == false) {
                             in.close();
-                            return;}
+                            return;
+                        }
                         if (b2 == 0xd8)//Start OF Image의 끝 바이트
                             break;
                     }
@@ -106,9 +120,10 @@ public class MyHomeCCTV extends SurfaceView implements SurfaceHolder.Callback, R
                     if (b == 0xff) {//End OF Image의 시작 바이트
                         i++;
                         int b2 = in.read();
-                        if (i%100==0&&threadRunning==false){
+                        if (i % 100 == 0 && threadRunning == false) {
                             in.close();
-                            return;}
+                            return;
+                        }
                         arr[i] = (byte) b2;
                         if (b2 == 0xd9) {//End OF Image의 끝 바이트
                             break;
@@ -133,8 +148,23 @@ public class MyHomeCCTV extends SurfaceView implements SurfaceHolder.Callback, R
             }
             in.close();
 
+        } catch (IOException e) {
+            Log.e("ANR_TEST", "IO Error: " + e.toString());
+            showToast("영상 수신 실패: " + e.getMessage());
         } catch (Exception e) {
-            Log.e("MyHomeCCTV", "Error:" + e.toString());
+            Log.e("ANR_TEST", "Error: " + e.toString());
+            showToast("영상 수신 중 오류 발생: " + e.getMessage());
         }
+    }
+
+    // UI 스레드에서 Toast 메시지를 표시하기 위한 메서드
+    private void showToast(final String message) {
+    // Handler를 사용하여 UI 스레드에서 Toast 표시
+        uiHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                Toast.makeText(getContext(), message, Toast.LENGTH_LONG).show();
+            }
+        });
     }
 }
