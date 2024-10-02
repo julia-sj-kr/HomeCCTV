@@ -201,11 +201,6 @@ https://github.com/user-attachments/assets/e667d3b1-ead7-4d72-a050-639cb365f689
        <img src="https://github.com/user-attachments/assets/1161979b-89d2-428a-be46-2411a6954ad5">
 </p>
 
-https://github.com/user-attachments/assets/918b228a-7b34-4d42-8e4a-0f5ae4d90836
-
-
-
-
 가상 장치(AVD) 또는 안드로이드 앱에서 화면 방향 조정 버튼을 클릭하면 해당 방향으로 서보 모터 동작하여 화면 전환이 되도록 한다.
 
 a. 확대 영상 하단에 상하좌우 리모트 버튼(화면 방향 조정 버튼) 배치을 배치하고 각 버튼에 대한 이벤트 리스너를 구현합니다.
